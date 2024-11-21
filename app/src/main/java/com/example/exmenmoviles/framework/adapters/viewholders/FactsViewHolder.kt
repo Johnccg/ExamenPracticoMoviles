@@ -7,7 +7,11 @@ import com.example.exmenmoviles.databinding.ItemFactBinding
 
 class FactsViewHolder(private val binding: ItemFactBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(item: Data, context: Context){
-        binding.TVDate.text = item.date
+        if (item.date.substring(0,1) == "-"){
+            binding.TVDate.text = "${item.date.substring(1)} BC"
+        } else {
+            binding.TVDate.text = "${item.date} AD"
+        }
         binding.TVCategory.text = "${item.category1}: ${item.category2}"
         binding.TVDescription.text = item.description
     }

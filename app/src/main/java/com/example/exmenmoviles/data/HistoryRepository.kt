@@ -1,14 +1,12 @@
 package com.example.exmenmoviles.data
 
-import android.util.Log
 import com.example.exmenmoviles.data.api.model.facts.Data
 import com.example.exmenmoviles.data.api.model.facts.facts
 import com.example.exmenmoviles.data.api.model.facts.Result
-import com.example.exmenmoviles.data.network.NetworkModuleDI
-import com.example.pokedex_lab.data.api.PokemonApiClient
+import com.example.pokedex_lab.data.api.FactsApiClient
 
 class HistoryRepository {
-    private val apiHistory = PokemonApiClient()
+    private val apiHistory = FactsApiClient()
 
     /**
      * Función para llamar hacer una llamada ala base de datos y obtener la lsita de datos históricos

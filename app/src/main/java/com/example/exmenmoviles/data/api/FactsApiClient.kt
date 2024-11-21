@@ -2,8 +2,8 @@ package com.example.pokedex_lab.data.api
 
 import com.example.exmenmoviles.data.api.model.facts.facts
 
-class PokemonApiClient {
-    private lateinit var api: PokemonAPIService
+class FactsApiClient {
+    private lateinit var api: FactsAPIService
 
     suspend fun getFactsList(page:Int): facts?{
         api = NetworkModuleDI()

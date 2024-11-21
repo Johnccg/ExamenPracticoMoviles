@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.exmenmoviles.data.api.model.facts.Data
-import com.example.exmenmoviles.data.api.model.facts.facts
 import com.example.exmenmoviles.data.network.NetworkModuleDI
 import com.example.exmenmoviles.databinding.ActivityHistoryBinding
 import com.example.exmenmoviles.framework.adapters.FactsAdapter
@@ -40,17 +39,12 @@ class HistoryActivity: AppCompatActivity() {
 
     private fun setUpRecyclerView(dataForList:ArrayList<Data>){
         binding.RVPokemon.setHasFixedSize(true)
-        //es una lista continua de elementos donde su punto más importante es su orientación Vertical u Horizontal
-         val linearLayoutManager = LinearLayoutManager(
-                    this,//Ya que estamos e un fragment no usa this esta función toma el context del padre
-                    LinearLayoutManager.VERTICAL,
-                    false)
-//        val gridLayoutManager = GridLayoutManager(
-//            this,//Ya que estamos e un fragment no usa this esta función toma el context del padre
-//            3,
-//            GridLayoutManager.VERTICAL,
-//            false)
-        binding.RVPokemon.layoutManager = linearLayoutManager
+        val gridLayoutManager = GridLayoutManager(
+            this,
+            2,
+            GridLayoutManager.VERTICAL,
+            false)
+        binding.RVPokemon.layoutManager = gridLayoutManager
         adapter.factsAdapter(dataForList, this)
         binding.RVPokemon.adapter = adapter
     }
