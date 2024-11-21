@@ -36,14 +36,14 @@ class HistoryRequirement {
      * */
     fun getFactsListTest(
         page: Int
-    ): facts? = historyRepository.getFactsListTest(page)
+    ): factsObject? = historyRepository.getFactsListTest(page)
 
     /**
      * Obtiene datos de prueba siguiendo MVVM para simular una llamada a la base de datos que falle
      * */
     fun getFactsListTestError(
         page: Int
-    ): facts?{
+    ): factsObject?{
         var result = historyRepository.getFactsListTestError(page)
         Log.d("Salida", result?.result?.code.toString())
         while (result?.result?.code == 400){

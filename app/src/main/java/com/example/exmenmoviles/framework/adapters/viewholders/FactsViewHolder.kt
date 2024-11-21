@@ -4,7 +4,13 @@ import android.content.Context
 import androidx.recyclerview.widget.RecyclerView
 import com.example.exmenmoviles.data.api.model.factsData
 import com.example.exmenmoviles.databinding.ItemFactBinding
+import com.example.exmenmoviles.framework.views.HistoryActivity
 
+/**
+ * ViewHolder para manejar y vincular hechos en el [RecyclerView] de [HistoryActivity].
+ *
+ * @property binding Enlace de vista que corresponde al objeto que se va a vincular.
+ */
 class FactsViewHolder(private val binding: ItemFactBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(item: factsData, context: Context){
         if (item.date.substring(0,1) == "-"){
