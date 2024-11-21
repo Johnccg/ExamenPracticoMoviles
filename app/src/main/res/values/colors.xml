@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="primaryDark">#ae8b6c</color>
+    <color name="primary">#d7bca6</color>
+    <color name="primaryLight">#fdeede</color>
+    <color name="accent">#9bc2e4</color>
+    <color name="accentVariant1">#e6f0f7</color>
+    <color name="accentVariant2">#559bdd</color>
+    <color name="semiWhite">#FAFAFA</color>
+    <color name="semiBlack">#212121</color>
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

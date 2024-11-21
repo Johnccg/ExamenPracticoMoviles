@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="4dp"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="8dp"
+        android:backgroundTint="@color/primaryLight"
+        android:layout_marginBottom="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/semiBlack"
+                android:layout_marginTop="15dp"
+                android:text="Fecha"
+                android:id="@+id/TVDate"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/semiBlack"
+                android:layout_marginBottom="8dp"
+                android:text="Categoria1: Categoria2"
+                android:id="@+id/TVCategory"
+                />
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/semiBlack"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dui turpis, ultricies et rutrum at, euismod id sem. Nam at fermentum ex. Mauris pellentesque magna sed metus lobortis tristique. Vivamus vitae arcu sit amet quam commodo varius. Aliquam vel dolor eget nunc gravida finibus. Suspendisse gravida mauris congue,"
+                android:id="@+id/TVDescription"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
