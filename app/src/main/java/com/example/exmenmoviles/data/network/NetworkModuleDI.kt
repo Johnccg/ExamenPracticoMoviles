@@ -1,6 +1,7 @@
 package com.example.exmenmoviles.data.network
 
 import android.content.Context
+import android.util.Log
 import com.example.exmenmoviles.utils.Constants.APPLICATION_ID
 import com.example.exmenmoviles.utils.Constants.BASE_URL
 import com.example.exmenmoviles.utils.Constants.CLIENT_KEY
@@ -45,6 +46,7 @@ object NetworkModuleDI {
         callback: (T?, Exception?) -> Unit,
     ) {
         ParseCloud.callFunctionInBackground(functionName, params) { result: T?, e: ParseException? ->
+            Log.d("salida", "Cloud function ejecutada")
             if (e == null) {
                 callback(result, null)
             } else {
